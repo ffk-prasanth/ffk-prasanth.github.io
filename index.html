@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFK PRASANTH | Official Website | Tamil Free Fire Gaming Universe 🔥</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Welcome to the official homepage of FFK Prasanth and the FFK Family. Experience the ultimate Tamil Free Fire gaming hub featuring daily live streams, custom match coordination, region pushes, and mass gaming entertainment. Join the squad!">
+    <meta name="keywords" content="FFK PRASANTH, FFK Prasanth, FFK Family, Tamil Free Fire, FFK Prasanth Live, FFK Prasanth YouTube, Tamil gaming streamer, Free Fire Tamil Nadu, ffkprasanthbusiness, FFK Deepak, Free Fire custom matches, Prasanth Gaming">
+    <meta name="author" content="FFK PRASANTH">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060404">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://ffkprasanth.github.io/">
+
+    <!-- Browser Favicon / Tab Icon -->
+    <link rel="icon" type="image/png" href="Images/ffk_prasanth_logo.png">
+    <link rel="apple-touch-icon" href="Images/ffk_prasanth_logo.png">
+
+    <!-- Open Graph / Facebook Meta Tags (For rich social media preview) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ffkprasanth.github.io/">
+    <meta property="og:title" content="FFK PRASANTH | Official Website | Tamil Free Fire Gaming Universe 🔥">
+    <meta property="og:description" content="Welcome to the official lobby of FFK Prasanth and the FFK Family. Join Tamil Nadu's mass entertainer for daily live streams, squad highlights, and gaming entertainment!">
+    <meta property="og:image" content="Images/ffk_banner.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ffkprasanth.github.io/">
+    <meta name="twitter:title" content="FFK PRASANTH | Official Tamil Gaming Hub 🎮">
+    <meta name="twitter:description" content="Daily Free Fire streams, bento-grid squad memory gallery, and social networks of FFK Prasanth. Join the family!">
+    <meta name="twitter:image" content="Images/ffk_banner.png">
+
+    <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "FFK PRASANTH",
+      "alternateName": "ffk_prasanth",
+      "url": "https://ffkprasanth.github.io/",
+      "image": "https://ffkprasanth.github.io/Images/ffk_prasanth_logo.png",
+      "sameAs": [
+        "https://www.youtube.com/@FFK_Prasanth",
+        "https://www.youtube.com/@FFKPrasanth_Shorts",
+        "https://www.youtube.com/@FFKPrasanth_Live",
+        "https://www.youtube.com/@ffkprasanth07",
+        "https://www.instagram.com/ffk_prasanth/"
+      ],
+      "jobTitle": "Professional Gamer & Content Creator",
+      "knowsAbout": ["Free Fire", "Gaming", "Live Streaming", "Content Creation", "Tamil Gaming Community"],
+      "email": "ffkprasanthbusiness@gmail.com"
+    }
+    </script>
+
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons for Gaming Aesthetics -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading-active">
+
+    <!-- CANVAS LAYERS FOR ULTRA-PREMIUM EFFECTS -->
+    <canvas id="bg-canvas"></canvas>
+    <canvas id="explosion-canvas"></canvas>
+
+    <!-- ==================== CINEMATIC INTRO SCREEN ==================== -->
+    <div id="intro-screen">
+        <canvas id="intro-canvas"></canvas>
+        
+        <!-- Shockwave & Explosion Overlays -->
+        <div class="shockwave" id="intro-shockwave"></div>
+        <div class="fire-flash" id="intro-flash"></div>
+        
+        <div class="intro-content">
+            <!-- Ground Crack Effect Container -->
+            <div class="ground-crack" id="ground-crack"></div>
+            
+            <!-- Character Immersive Container -->
+            <div class="character-container" id="intro-char-container">
+                <img src="Images/FFK PRASANTH MODEL.png" alt="FFK PRASANTH Hero Character" class="char-model" id="char-model">
+                
+                <!-- Glowing purple eyes overlay -->
+                <div class="purple-eyes-glow" id="purple-eyes"></div>
+                <!-- Aura flare overlay -->
+                <div class="fire-aura-flare"></div>
+            </div>
+            
+            <!-- Cinematic Typography -->
+            <div class="intro-titles" id="intro-titles">
+                <h1 class="cinematic-title font-paint">FFK PRASANTH</h1>
+                <p class="cinematic-subtitle">Hii Guys Naan Ungal Prasanth 🔥</p>
+            </div>
+            
+            <!-- Progress Bar / Loading State -->
+            <div class="loading-bar-wrapper" id="loading-bar-wrapper">
+                <div class="loading-bar-glow"></div>
+                <div class="loading-bar" id="intro-loading-bar"></div>
+                <span class="loading-percentage" id="loading-text">CONNECTING TO LOBBY... 0%</span>
+            </div>
+
+            <!-- Custom Mass Enter Game Button (Appears when loaded) -->
+            <button class="mass-btn enter-lobby-btn hidden-opacity" id="enter-btn">
+                <span>ENTER THE UNIVERSE</span>
+                <div class="btn-glow-bar"></div>
+            </button>
+            
+            <!-- Skip Option (Hidden but kept in DOM to prevent JS crash) -->
+            <div class="skip-intro" id="skip-intro" style="display: none;">SKIP INTRO <i class="fa-solid fa-angles-right"></i></div>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN WEBPAGE ==================== -->
+    <div id="main-app" class="hidden-app">
+        
+        <!-- ==================== DYNAMIC HEADER ==================== -->
+        <header class="glass-header">
+            <div class="header-container">
+                <a href="#hero" class="logo font-paint">FFK <span>PRASANTH</span><span class="live-badge-glow" id="live-badge-header" style="display: none;"><span class="dot"></span> LIVE</span></a>
+                
+                <!-- Desktop Nav Links -->
+                <nav class="desktop-nav">
+                    <a href="#hero" class="nav-link active">HOME</a>
+                    <a href="#about" class="nav-link">STREAMER</a>
+                    <a href="#channels" class="nav-link">CHANNELS</a>
+                    <a href="#community" class="nav-link">FFK FAMILY</a>
+                    <a href="gallery.html" class="nav-link">GALLERY</a>
+                    <a href="#socials" class="nav-link nav-btn">JOIN COMMUNITY</a>
+                </nav>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="hamburger-btn" aria-label="Toggle Menu" id="hamburger-toggle">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Dynamic Drawer Menu -->
+        <div class="mobile-drawer" id="mobile-drawer">
+            <button class="drawer-close-btn" id="drawer-close" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <nav class="mobile-nav">
+                 <a href="#hero" class="mobile-link">HOME</a>
+                <a href="#about" class="mobile-link">STREAMER <span class="live-dot-mobile" id="live-dot-mobile" style="display: none;">🔴</span></a>
+                <a href="#channels" class="mobile-link">CHANNELS</a>
+                <a href="#community" class="mobile-link">FFK FAMILY</a>
+                <a href="gallery.html" class="mobile-link">FAMILY GALLERY 📸</a>
+                <a href="#socials" class="mobile-link mobile-btn">JOIN FAMILY 🔥</a>
+            </nav>
+        </div>
+
+        <!-- ==================== HERO SECTION ==================== -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-container">
+                <div class="hero-text-content">
+                    <div class="badge-gaming"><i class="fa-solid fa-gamepad"></i> TAMIL NADU'S MASS ENTERTAINER</div>
+                    <h1 class="hero-title font-paint animate-text">FFK <span>PRASANTH</span></h1>
+                    <p class="hero-subtitle animate-text-slow">Hii Guys Naan Ungal Prasanth 🔥</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#channels" class="mass-btn primary-btn">
+                            <span>EXPLORE CHANNELS</span>
+                            <div class="btn-glow-bar"></div>
+                        </a>
+                        <a href="#about" class="mass-btn secondary-btn">
+                            <span>ABOUT ME</span>
+                            <div class="btn-glow-bar"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Display -->
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-glow"></div>
+                    <div class="hero-image-card">
+                        <img src="Images/FFK_PRASANTH_VANAKKAM.png" alt="FFK PRASANTH Free Fire Model" class="hero-char-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="section-glow red-glow"></div>
+            <div class="about-bg-squad"></div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag font-paint">WHO IS FFK PRASANTH?</span>
+                    <h2 class="section-title">THE STREAMER BEHIND THE SCREENS</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Identity Card -->
+                    <div class="about-card glass-card hover-tilt">
+                        <div class="card-icon"><i class="fa-solid fa-skull-crossbones"></i></div>
+                        <h3 class="card-title">Streamer Identity</h3>
+                        <p class="card-text">Tamil Nadu's premier high-energy gaming entertainer. Bringing extreme energy, humor, and top-tier Free Fire gameplays, packed with mass local dialogues and non-stop entertainment that keeps thousands hooked.</p>
+                        <div class="card-glow-border"></div>
+                    </div>
+
+                    <!-- Journey Card -->
+                    <div class="about-card glass-card hover-tilt">
+                        <div class="card-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <h3 class="card-title">Gaming Journey</h3>
+                        <p class="card-text">From humble beginnings to building one of the most vibrant gaming hubs in the Tamil community. Dedicated to consistent streaming, interactive play sessions, and evolving alongside the gaming landscape.</p>
+                        <div class="card-glow-border"></div>
+                    </div>
+
+                    <!-- Style Card -->
+                    <div class="about-card glass-card hover-tilt">
+                        <div class="card-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                        <h3 class="card-title">Entertainment Style</h3>
+                        <p class="card-text">A unique mix of high-speed gaming reflexes and organic comedy. Known for signature catchphrases, fun-loving trolling, epic reaction times, and an unbreakable bond of warmth with every single viewer.</p>
+                        <div class="card-glow-border"></div>
+                    </div>
+
+                    <!-- Connection Card -->
+                    <div class="about-card glass-card hover-tilt">
+                        <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <h3 class="card-title">Community Connection</h3>
+                        <p class="card-text">More than just viewers; we are a family. Deeply committed to maintaining positivity, spreading joy, engaging during live streams, and fostering a space where every gamer feels valued and welcomed.</p>
+                        <div class="card-glow-border"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CHANNELS SECTION ==================== -->
+        <section id="channels" class="channels-section scroll-reveal">
+            <div class="section-glow orange-glow"></div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag font-paint">THE UNIVERSE BEYOND</span>
+                    <h2 class="section-title">FFK CHANNELS NETWORK</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="channels-grid">
+                    <!-- FFK PRASANTH (Main) -->
+                    <div class="channel-card glass-card hover-tilt main-channel">
+                        <div class="channel-glow-ring red"></div>
+                        <div class="channel-badge">PRIMARY</div>
+                        <div class="channel-header-info">
+                            <div class="channel-avatar-wrapper">
+                                <img src="Images/ffk_prasanth_logo.png" alt="FFK PRASANTH Logo" class="channel-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <i class="fa-brands fa-youtube channel-logo-icon" style="display:none;"></i>
+                            </div>
+                            <div>
+                                <h3 class="channel-name">FFK PRASANTH <span class="live-card-badge" id="live-card-badge-main" style="display: none;">LIVE NOW</span></h3>
+                                <div class="channel-subs" data-target="850000">0+ Subscribers</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">The ultimate FFK PRASANTH's Headquarters! Experience non-stop high-energy daily streams, epic Free Fire gameplay, record-breaking Booyah streaks, and intense region-push matches that will give you pure goosebumps!</p>
+                        <div class="channel-features">
+                            <span><i class="fa-solid fa-circle-check"></i> Daily Free Fire Live Stream</span>
+                            <span><i class="fa-solid fa-circle-check"></i> Booyah Streak & Region Push</span>
+                        </div>
+                        <a href="https://www.youtube.com/@FFK_Prasanth" target="_blank" class="channel-btn btn-red">SUBSCRIBE <i class="fa-solid fa-square-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- FFK PRASANTH SHORTS -->
+                    <div class="channel-card glass-card hover-tilt">
+                        <div class="channel-glow-ring orange"></div>
+                        <div class="channel-header-info">
+                            <div class="channel-avatar-wrapper">
+                                <img src="Images/ffk_prasanth_logo.png" alt="FFK PRASANTH Shorts Logo" class="channel-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <i class="fa-solid fa-bolt channel-logo-icon" style="display:none;"></i>
+                            </div>
+                            <div>
+                                <h3 class="channel-name">FFK PRASANTH SHORTS <span class="live-card-badge" id="live-card-badge-shorts" style="display: none;">LIVE NOW</span></h3>
+                                <div class="channel-subs" data-target="570000">0+ Subscribers</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">Late-night variety gaming vibes at its peak! Dive into spine-chilling horror playthroughs, hilarious co-op sessions, and a wide range of PC games loaded with full-on mass entertainment and non-stop laughter.</p>
+                        <div class="channel-features">
+                            <span><i class="fa-solid fa-circle-check"></i> Late-Night Variety PC Games</span>
+                            <span><i class="fa-solid fa-circle-check"></i> Horror Playthroughs & Co-op Fun</span>
+                        </div>
+                        <a href="https://www.youtube.com/@FFKPrasanth_Shorts" target="_blank" class="channel-btn btn-orange">SUBSCRIBE <i class="fa-solid fa-square-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- FFK PRASANTH LIVE -->
+                    <div class="channel-card glass-card hover-tilt">
+                        <div class="channel-glow-ring purple"></div>
+                        <div class="channel-header-info">
+                            <div class="channel-avatar-wrapper">
+                                <img src="Images/ffk_prasanth_logo.png" alt="FFK PRASANTH Live Logo" class="channel-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <i class="fa-solid fa-tower-broadcast channel-logo-icon animate-pulse" style="display:none;"></i>
+                            </div>
+                            <div>
+                                <h3 class="channel-name">FFK PRASANTH LIVE <span class="live-card-badge" id="live-card-badge-live" style="display: none;">LIVE NOW</span></h3>
+                                <div class="channel-subs" data-target="300000">0+ Subscribers</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">Get ready for the ultimate high-speed action! This channel is dedicated exclusively to daily live streams on the YouTube Shorts feed, delivering intense Free Fire matches in portrait format for the true gaming squad.</p>
+                        <div class="channel-features">
+                            <span><i class="fa-solid fa-circle-check"></i> Free Fire YouTube Shorts Live</span>
+                            <span><i class="fa-solid fa-circle-check"></i> Portrait Format Live Action</span>
+                        </div>
+                        <a href="https://www.youtube.com/@FFKPrasanth_Live" target="_blank" class="channel-btn btn-red">SUBSCRIBE <i class="fa-solid fa-square-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- FFK PRASANTH PLAYS -->
+                    <div class="channel-card glass-card hover-tilt">
+                        <div class="channel-glow-ring red"></div>
+                        <div class="channel-header-info">
+                            <div class="channel-avatar-wrapper">
+                                <img src="Images/ffk_prasanth_logo.png" alt="FFK PRASANTH Plays Logo" class="channel-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <i class="fa-solid fa-gamepad channel-logo-icon" style="display:none;"></i>
+                            </div>
+                            <div>
+                                <h3 class="channel-name">FFK PRASANTH PLAYS <span class="live-card-badge" id="live-card-badge-plays" style="display: none;">LIVE NOW</span></h3>
+                                <div class="channel-subs" data-target="15000">0+ Subscribers</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">A nostalgic trip down memory lane! Reliving legendary PC gaming memories, replaying retro favorites, and celebrating special throwback sessions curated exclusively for the FFK family.</p>
+                        <div class="channel-features">
+                            <span><i class="fa-solid fa-circle-check"></i> Reliving Legendary PC Memories</span>
+                            <span><i class="fa-solid fa-circle-check"></i> Retro Favorites & Throwbacks</span>
+                        </div>
+                        <a href="https://www.youtube.com/@ffkprasanth07" target="_blank" class="channel-btn btn-red">SUBSCRIBE <i class="fa-solid fa-square-arrow-up-right"></i></a>
+                    </div>
+
+                    <!-- FFK DEEPAK -->
+                    <div class="channel-card glass-card hover-tilt co-creator">
+                        <div class="channel-glow-ring cyan"></div>
+                        <div class="channel-badge blue">CO-CREATOR</div>
+                        <div class="channel-header-info">
+                            <div class="channel-avatar-wrapper">
+                                <img src="Images/ffk_deepak_logo.png" alt="FFK DEEPAK Logo" class="channel-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <i class="fa-solid fa-user-group channel-logo-icon" style="display:none;"></i>
+                            </div>
+                            <div>
+                                <h3 class="channel-name">FFK DEEPAK <span class="live-card-badge" id="live-card-badge-deepak" style="display: none;">LIVE NOW</span></h3>
+                                <div class="channel-subs" data-target="90000">0+ Subscribers</div>
+                            </div>
+                        </div>
+                        <p class="channel-desc">The legendary partner-in-crime and ultimate duo partner! Delivering high-octane collaborative streams, unmatched duo coordination matches, and double the mass energy to keep the chat absolutely electrified.</p>
+                        <div class="channel-features">
+                            <span><i class="fa-solid fa-circle-check"></i> High-Octane Collaborative Streams</span>
+                            <span><i class="fa-solid fa-circle-check"></i> Duo Match Room Coordination</span>
+                        </div>
+                        <a href="https://www.youtube.com/@FFKDeepak-d9o" target="_blank" class="channel-btn btn-cyan">SUBSCRIBE <i class="fa-solid fa-square-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== COMMUNITY SECTION ==================== -->
+        <section id="community" class="community-section scroll-reveal">
+            <div class="community-bg-blend"></div>
+            <div class="container">
+                <div class="community-card glass-card">
+                    <div class="community-header">
+                        <span class="community-tag font-paint">ONE CREATOR. ONE FAMILY.</span>
+                        <h2 class="community-title">WELCOME TO THE FFK FAMILY ❤️🔥</h2>
+                        <p class="community-desc">A massive family of passionate Tamil gamers connected through entertainment, positivity, fun, and unforgettable gaming moments.</p>
+                    </div>
+
+                    <!-- Community Stat Counters -->
+                    <div class="community-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="1735000">0+</span>
+                            <span class="stat-label">Family Members</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5000">0+</span>
+                            <span class="stat-label">Videos & Shorts</span>
+                        </div>
+                    </div>
+
+                    <!-- Animated quote blocks -->
+                    <div class="community-carousel">
+                        <div class="quote-slide active">
+                            <p class="quote-text">"Gaming is not just about scoring kills; it is about building memories and laughing together with my FFK FAMILY. Thank you for the massive love! ❤️"</p>
+                            <span class="quote-author">- FFK PRASANTH</span>
+                        </div>
+                    </div>
+
+                    <!-- FFK Family Gallery CTA Button -->
+                    <div class="gallery-cta-wrapper">
+                        <a href="gallery.html" class="mass-btn primary-btn gallery-cta-btn">
+                            <span>EXPLORE FAMILY GALLERY <i class="fa-solid fa-images"></i></span>
+                            <div class="btn-glow-bar"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SOCIAL / CTA SECTION ==================== -->
+        <section id="socials" class="socials-section scroll-reveal">
+            <div class="section-glow purple-glow"></div>
+            <div class="container">
+                <div class="socials-box">
+                    <h2 class="socials-title font-paint">CONNECT WITH THE CREATOR</h2>
+                    <p class="socials-subtitle">Enter the FFK Lobby and join the live conversations across our networks!</p>
+                    
+                    <div class="social-buttons-container">
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@FFK_Prasanth" target="_blank" class="social-btn yt-btn">
+                            <div class="social-btn-inner">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span>YOUTUBE</span>
+                            </div>
+                            <div class="social-btn-glow"></div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/ffk_prasanth?igsh=MTZ3MnA1czJsamw0Zw%3D%3D" target="_blank" class="social-btn ig-btn">
+                            <div class="social-btn-inner">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>INSTAGRAM (100k+)</span>
+                            </div>
+                            <div class="social-btn-glow"></div>
+                        </a>
+
+                        <!-- Business Email -->
+                        <a href="mailto:ffkprasanthbusiness@gmail.com" class="social-btn email-btn">
+                            <div class="social-btn-inner">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div class="btn-text-content">
+                                    <span class="btn-primary-text">BUSINESS & COLLABS</span>
+                                    <span class="btn-sub-text">ffkprasanthbusiness@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="social-btn-glow"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="cinematic-footer">
+            <div class="footer-glow-bar"></div>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand font-paint">FFK <span>PRASANTH</span></div>
+                    <p class="footer-text">Built with ❤️ for the FFK FAMILY</p>
+                    <p class="copyright">&copy; 2026 FFK PRASANTH. All Rights Reserved. Designed for ultimate gaming experience.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ==================== SPECIAL INTERACTIVE FLOATING BUTTON ==================== -->
+        <div class="fire-podunga-container" id="fire-podunga-trigger">
+            <span class="btn-text">🔥 Fire Podunga Guys!</span>
+            <div class="btn-border-glow"></div>
+        </div>
+
+    </div>
+
+    <!-- GSAP CDN Libraries for Buttery Smooth Cinematic Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- Custom Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
